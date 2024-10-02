@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практика с jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <button id="changeColor">Изменить цвет текста</button>
+  <button id="toggleImage">Скрыть/Показать изображение</button>
+  <button id="addParagraph">Добавить абзац</button>
+
+
+  <p id="text">Этот текст изменит цвет.</p>
+  <img id="image" src="https://via.placeholder.com/150" alt="Пример изображения">
+  
+  <script>
+    // Изменение цвета текста
+    $('#changeColor').click(function() {
+      $('#text').css('color', 'blue');
+    });
+
+
+    // Скрытие и показ изображения
+    $('#toggleImage').click(function() {
+      $('#image').fadeToggle();
+    });
+
+
+    // Добавление нового абзаца
+    $('#addParagraph').click(function() {
+      $('body').append('<p>Новый абзац добавлен с помощью jQuery.</p>');
+    });
+  </script>
+</body>
+</html>

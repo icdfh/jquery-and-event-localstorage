@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скрыть/Показать элемент с jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <p id="textToToggle">Этот текст можно скрыть и показать с помощью кнопки.</p>
+  <button id="toggleButton">Скрыть/Показать текст</button>
+
+
+  <script>
+    // Используем метод toggle для скрытия и показа текста
+    $('#toggleButton').click(function() {
+      $('#textToToggle').toggle();
+    });
+  </script>
+</body>
+</html>

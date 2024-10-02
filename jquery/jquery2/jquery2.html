@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изменение стилей с jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <p id="styledText">Этот текст изменит свой цвет и размер при клике на кнопку.</p>
+  <button id="styleButton">Изменить стиль</button>
+
+
+  <script>
+    // Используем jQuery для изменения стилей CSS
+    $('#styleButton').click(function() {
+      $('#styledText').css({
+        'color': 'red',
+        'font-size': '24px'
+      });
+    });
+  </script>
+</body>
+</html>

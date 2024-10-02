@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>События в jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <button id="hoverButton">Наведи на меня</button>
+  <p id="hoverText">Этот текст изменится, когда вы наведете курсор на кнопку.</p>
+
+
+  <script>
+    // Используем события мыши для изменения текста
+    $('#hoverButton').hover(
+      function() {
+        $('#hoverText').text('Вы навели курсор на кнопку!');
+      },
+      function() {
+        $('#hoverText').text('Этот текст изменится, когда вы наведете курсор на кнопку.');
+      }
+    );
+  </script>
+</body>
+</html>

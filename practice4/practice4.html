@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изменение текста по событию</title>
+</head>
+<body>
+  <p id="text">Это текст изменится, когда вы нажмёте кнопку.</p>
+  <button id="changeTextButton">Изменить текст</button>
+
+  <script>
+    // Добавляем обработчик события клика для изменения текста
+    document.getElementById('changeTextButton').addEventListener('click', function() {
+      document.getElementById('text').textContent = 'qwerty!';
+    });
+  </script>
+</body>
+</html>

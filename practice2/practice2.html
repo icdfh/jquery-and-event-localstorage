@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SessionStorage — пример</title>
+</head>
+<body>
+  <h1>SessionStorage — пример</h1>
+  <label for="sessionData">Введите данные:</label>
+  <input type="text" id="sessionData">
+  <button id="saveSessionButton">Сохранить в сессии</button>
+  <p id="sessionOutput">Сессия: <span id="sessionInfo">пусто</span></p>
+
+  <script>
+    // Проверка, есть ли данные в SessionStorage
+    if (sessionStorage.getItem('data')) {
+      document.getElementById('sessionInfo').textContent = sessionStorage.getItem('data');
+    }
+
+    // Сохранение данных в SessionStorage
+    document.getElementById('saveSessionButton').addEventListener('click', function() {
+      let data = document.getElementById('sessionData').value;
+      sessionStorage.setItem('data', data);
+      document.getElementById('sessionInfo').textContent = data;
+    });
+  </script>
+</body>
+</html>

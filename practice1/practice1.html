@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage — пример</title>
+</head>
+<body>
+  <h1>LocalStorage — пример</h1>
+  <label for="nameInput">Введите ваше имя:</label>
+  <input type="text" id="nameInput">
+  <button id="saveButton">Сохранить имя</button>
+  <p id="greeting">Привет, <span id="savedName">гость</span>!</p>
+
+  <script>
+    // Проверка, если имя уже сохранено в LocalStorage
+    if (localStorage.getItem('name')) {
+      document.getElementById('savedName').textContent = localStorage.getItem('name');
+    }
+
+    // Сохранение имени в LocalStorage
+    document.getElementById('saveButton').addEventListener('click', function() {
+      let name = document.getElementById('nameInput').value;
+      localStorage.setItem('name', name);
+      document.getElementById('savedName').textContent = name;
+    });
+  </script>
+</body>
+</html>
+
